@@ -69,7 +69,7 @@ nav {
   font-family: "Oswald", sans-serif;
 }
 
-a {
+a:not(.social-icons a) {
   margin-right: 25px;
   color: var(--primary-color);
   text-decoration: none;
@@ -77,8 +77,8 @@ a {
   font-weight: bold;
 }
 
-a:hover,
-a:focus {
+a:hover:not(.social-icons a),
+a:focus:not(.social-icons a) {
   color: var(--on-background);
   border-bottom: 3px solid;
 }
@@ -175,14 +175,37 @@ p {
 }
 
 /* Contact Section */
-.fab {
+
+.social-icons {
+  display: flex;
+  font-size: 40px;
+  align-items: center;
+}
+
+.social-icons img {
+  height: 100px;
+  width: 100px;
+  cursor: pointer;
+}
+
+.social-icons img:hover {
+  content: url("./img/logo2.png");
+}
+
+.social-icons img,
+.social-icons p {
+  margin-right: 50px;
+}
+
+.fab,
+.fa-solid {
   font-size: 100px;
   margin-right: 50px;
-  cursor: pointer;
   color: var(--primary-color);
 }
 
-.fab:hover {
+.fab:hover,
+.fa-solid:hover {
   color: var(--on-background);
 }
 
